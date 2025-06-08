@@ -77,7 +77,7 @@ export default function TargetAudience() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/clientes/cliente1.png"
+                  src="/Clientes/Cliente1.png"
                   alt="Mulher reflexiva olhando para o horizonte"
                   className="w-full h-full object-cover"
                 />
