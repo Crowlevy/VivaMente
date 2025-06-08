@@ -11,7 +11,7 @@ export default function HeroSection() {
   const y2 = useTransform(scrollY, [0, 300], [0, -100]);
   const y3 = useTransform(scrollY, [0, 300], [0, -150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0.3]);
-  
+
   const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
   const y1Spring = useSpring(y1, springConfig);
   const y2Spring = useSpring(y2, springConfig);
@@ -75,22 +75,22 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-secondary-100 via-white to-primary-50 overflow-hidden">
       {/* Animated Background Elements */}
-      <motion.div 
+      <motion.div
         style={{ y: y3Spring }}
         className="absolute inset-0 pointer-events-none"
       >
-        <motion.div 
+        <motion.div
           variants={floatingVariants}
           animate="animate"
           className="absolute top-20 left-10 w-72 h-72 bg-primary-200/20 rounded-full blur-3xl"
         />
-        <motion.div 
+        <motion.div
           variants={floatingVariants}
           animate="animate"
           style={{ animationDelay: "2s" }}
           className="absolute bottom-20 right-10 w-96 h-96 bg-accent-200/20 rounded-full blur-3xl"
         />
-        <motion.div 
+        <motion.div
           variants={floatingVariants}
           animate="animate"
           style={{ animationDelay: "4s" }}
@@ -121,7 +121,7 @@ export default function HeroSection() {
         />
       ))}
 
-      <motion.div 
+      <motion.div
         style={{ opacity }}
         className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32"
       >
@@ -139,7 +139,7 @@ export default function HeroSection() {
             {/* Badge */}
             <motion.div
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(126, 87, 194, 0.2)"
               }}
@@ -159,7 +159,7 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8"
             >
-              <motion.span 
+              <motion.span
                 className="text-gray-900 block"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -167,7 +167,7 @@ export default function HeroSection() {
               >
                 Reprograme suas
               </motion.span>
-              <motion.span 
+              <motion.span
                 className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent block"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -175,7 +175,7 @@ export default function HeroSection() {
               >
                 emoções
               </motion.span>
-              <motion.span 
+              <motion.span
                 className="text-gray-900 block"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -190,8 +190,8 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              Transforme ansiedade em serenidade, bloqueios em oportunidades e 
-              estagnação em crescimento com nossa metodologia exclusiva que une 
+              Transforme ansiedade em serenidade, bloqueios em oportunidades e
+              estagnação em crescimento com nossa metodologia exclusiva que une
               neurociência, psicologia positiva e meditação guiada.
             </motion.p>
 
@@ -207,25 +207,25 @@ export default function HeroSection() {
                     className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 border-3 border-white flex items-center justify-center text-white font-semibold text-sm shadow-lg"
                     initial={{ scale: 0, rotate: -180 }}
                     animate={{ scale: 1, rotate: 0 }}
-                    transition={{ 
-                      duration: 0.6, 
+                    transition={{
+                      duration: 0.6,
                       delay: 1.2 + i * 0.1,
                       type: "spring",
                       stiffness: 200,
                       damping: 15
                     }}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       zIndex: 10,
                       boxShadow: "0 10px 25px rgba(126, 87, 194, 0.4)"
                     }}
                   >
-                    <Image src={`/clientes/cliente${i + 1}.png`} alt={`Cliente ${i + 1}`} width={48} height={48} className="rounded-full object-cover w-full h-full border-2 border-white" />
+                    <Image src={`/Clientes/Cliente${i + 1}.png`} alt={`Cliente ${i + 1}`} width={48} height={48} className="rounded-full object-cover w-full h-full border-2 border-white" />
                   </motion.div>
                 ))}
               </div>
               <div className="text-left">
-                <motion.div 
+                <motion.div
                   className="flex items-center gap-1"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -236,7 +236,7 @@ export default function HeroSection() {
                       key={star}
                       initial={{ scale: 0, rotate: -180 }}
                       animate={{ scale: 1, rotate: 0 }}
-                      transition={{ 
+                      transition={{
                         delay: 1.8 + star * 0.1,
                         type: "spring",
                         stiffness: 300,
@@ -247,7 +247,7 @@ export default function HeroSection() {
                     </motion.div>
                   ))}
                 </motion.div>
-                <motion.p 
+                <motion.p
                   className="text-sm text-gray-600 font-medium"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -271,7 +271,16 @@ export default function HeroSection() {
                 <Button
                   onClick={() => scrollToSection('preco')}
                   size="lg"
-                  className="bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+                  className="bg-gradient-to-r from-primary-500 to-accent-500 
+                  hover:from-primary-600 hover:to-accent-600 
+                  text-white 
+                  px-5 py-3 sm:px-8 sm:py-4 
+                  rounded-full 
+                  font-semibold 
+                  text-base sm:text-lg 
+                  shadow-md sm:shadow-xl hover:shadow-lg sm:hover:shadow-2xl 
+                  transition-all duration-300 
+                  group relative overflow-hidden"
                 >
                   <motion.span className="relative z-10 flex items-center gap-2">
                     Começar minha transformação
@@ -290,7 +299,7 @@ export default function HeroSection() {
                   />
                 </Button>
               </motion.div>
-              
+
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -313,7 +322,7 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-sm text-gray-500 mt-8 flex items-center justify-center lg:justify-start gap-2"
             >
-              <motion.span 
+              <motion.span
                 className="w-4 h-4 rounded-full bg-green-500 flex items-center justify-center"
                 variants={pulseVariants}
                 animate="animate"
@@ -334,8 +343,8 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* imagem */}
-              <motion.div 
-                className="relative w-full aspect-[4/5] max-w-md mx-auto"
+              <motion.div
+                className="relative w-full hidden sm:block aspect-[4/5] max-w-md mx-auto"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               >
@@ -347,19 +356,19 @@ export default function HeroSection() {
                   animate={{ scale: 1 }}
                   transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
                 />
-                
+
                 {/* elementos flutuantes */}
                 <motion.div
                   variants={floatingVariants}
                   animate="animate"
-                  className="absolute -top-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/50"
-                  whileHover={{ 
+                  className="absolute hidden sm:block -top-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/50"
+                  whileHover={{
                     scale: 1.1,
                     boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
                   }}
                 >
                   <div className="text-center">
-                    <motion.div 
+                    <motion.div
                       className="text-3xl font-bold text-primary-600 mb-1"
                       animate={{ scale: [1, 1.1, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}
@@ -369,19 +378,19 @@ export default function HeroSection() {
                     <div className="text-xs text-gray-600 font-medium">semanas</div>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   variants={floatingVariants}
                   animate="animate"
                   style={{ animationDelay: "3s" }}
-                  className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/50"
-                  whileHover={{ 
+                  className="absolute hidden sm:block -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/50"
+                  whileHover={{
                     scale: 1.1,
                     boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
                   }}
                 >
                   <div className="text-center">
-                    <motion.div 
+                    <motion.div
                       className="text-3xl font-bold text-accent-500 mb-1"
                       animate={{ scale: [1, 1.1, 1] }}
                       transition={{ duration: 2, repeat: Infinity, delay: 1 }}
@@ -395,7 +404,7 @@ export default function HeroSection() {
                 {/* efeito de brilho */}
                 <motion.div
                   className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary-500/20 to-accent-500/20 blur-xl"
-                  animate={{ 
+                  animate={{
                     opacity: [0.3, 0.6, 0.3],
                     scale: [1, 1.05, 1]
                   }}

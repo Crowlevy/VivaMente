@@ -21,7 +21,7 @@ export default function Testimonials() {
       name: "Maria Silva",
       age: 34,
       profession: "Consultora de Marketing",
-      image: "/clientes/cliente1.png",
+      image: "/Clientes/Cliente1.png",
       testimonial: "Eu estava numa fase muito difícil da minha vida, cheia de ansiedade e bloqueios. O curso da VivaMente me deu ferramentas reais para lidar com minhas emoções. Hoje me sinto muito mais equilibrada e confiante.",
       rating: 5,
       color: "from-pink-400 to-rose-500"
@@ -30,7 +30,7 @@ export default function Testimonials() {
       name: "Ana Santos",
       age: 29,
       profession: "Psicóloga",
-      image: "/clientes/cliente2.png",
+      image: "/Clientes/Cliente2.png",
       testimonial: "Como profissional da área, fiquei impressionada com a qualidade do conteúdo. A metodologia é realmente eficaz e me ajudou tanto pessoalmente quanto profissionalmente. Já indico para minhas pacientes!",
       rating: 5,
       color: "from-purple-400 to-indigo-500"
@@ -39,7 +39,7 @@ export default function Testimonials() {
       name: "Carla Mendes",
       age: 42,
       profession: "Executiva",
-      image: "/clientes/cliente3.png",
+      image: "/Clientes/Cliente3.png",
       testimonial: "Depois dos 40, me sentia perdida e sem direção. O curso me reconectou com meus sonhos e me deu clareza sobre o que realmente importa. Foi um divisor de águas na minha vida!",
       rating: 5,
       color: "from-emerald-400 to-teal-500"
@@ -281,7 +281,7 @@ export default function Testimonials() {
           className="text-center"
         >
           <motion.div
-            className="inline-flex items-center gap-6 bg-white/90 backdrop-blur-sm px-8 py-6 rounded-full shadow-xl border border-white/50"
+           className="inline-flex items-center gap-3 sm:gap-6 px-4 py-2 sm:px-8 sm:py-6 rounded-full shadow-md sm:shadow-xl border border-white/50 bg-white/90 backdrop-blur-sm"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
@@ -308,7 +308,7 @@ export default function Testimonials() {
                     boxShadow: "0 10px 25px rgba(126, 87, 194, 0.4)"
                   }}
                 >
-                  <Image src={`/clientes/cliente${i + 1}.png`} alt={`Cliente ${i + 1}`} width={48} height={48} className="rounded-full object-cover w-full h-full border-2 border-white" />
+                  <Image src={`/Clientes/Cliente${i + 1}.png`} alt={`Cliente ${i + 1}`} width={48} height={48} className="rounded-full object-cover w-full h-full border-2 border-white" />
                 </motion.div>
               ))}
             </div>

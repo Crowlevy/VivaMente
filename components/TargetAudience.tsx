@@ -87,7 +87,7 @@ export default function TargetAudience() {
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -top-6 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl"
+                className="absolute hidden sm:block -top-6 -left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl"
               >
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary-600 mb-1">28-45</div>
@@ -98,7 +98,7 @@ export default function TargetAudience() {
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl"
+                className="absolute hidden sm:block -bottom-6 -right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl"
               >
                 <div className="text-center">
                   <div className="text-3xl font-bold text-accent-500 mb-1">2.5K+</div>
