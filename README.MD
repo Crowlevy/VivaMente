@@ -56,7 +56,7 @@ VivaMente é uma landing page moderna e responsiva desenvolvida com Next.js 14, 
 
 ```bash
 #clone o repo
-git clone https://github.com/seu-usuario/vivamente.git
+git clone https://github.com/Crowlevy/VivaMente.git
 
 #dependências
 npm install
